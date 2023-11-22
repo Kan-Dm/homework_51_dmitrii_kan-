@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat Stats</title>
+</head>
+<body>
+<div style="display: flex; margin-bottom: 30px">
+    <div style="margin-right: 40px">
+        <img src="{{ cat_photo }}" alt="" style="width: 200px; height: 200px">
+    </div>
+    <div>
+        <p>Кот - {{ name }}</p>
+        <p>Возраст - {{ age }}</p>
+        <p>Уровень сытости - {{ satiety_level }}</p>
+        <p>Уровень настроения - {{ mood_level }}</p>
+    </div>
+</div>
+<form>
+    {% csrf_token %}
+<select name="select">
+    <option value="play">поиграть с котом</option>
+    <option value="feed">покормить кота</option>
+    <option value="sleep">уложить спать кота</option>
+</select>
+<input type="submit" value="подтвердить"/>
+</form>
+
+</body>
+</html>
